@@ -2,3 +2,9 @@
 node_modules/
 .env
 .netlify/
+*dzikri*
+*responses*
+*.pdf
+alchemy_of_self_responses.md
+dzikri_alchemy_of_self_manifesto.md
+dzikri_alchemy_of_self_manifesto.pdf

@@ -1,6 +1,7 @@
 /**
  * Alchemy of Self — Multi-Chapter Assessment Wizard
  * Contains all 38 individual questions across Chapters 1-4.
+ * Completely generic and privacy-safe.
  */
 
 const QUESTIONNAIRE_SCHEMA = {
@@ -12,7 +13,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 1,
         title: "What is your first name and how old are you?",
         prompt: "This information will be used to personalize your Alchemy of Self manifesto.",
-        placeholder: "e.g. Dzikri Feeroz, 29",
+        placeholder: "e.g. First Name, Age",
         type: "text"
       },
       {
@@ -97,7 +98,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 2,
         title: "Where do you currently live, and what is your living situation like?",
         prompt: "Tell us about your living situation - who do you live with, what's the space like, what do you love or dislike about it? How does your current environment affect your daily life and mood?",
-        placeholder: "City, apartment/house, environment, mood impact...",
+        placeholder: "City, living space, environment, mood impact...",
         type: "textarea"
       },
       {
@@ -105,7 +106,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 3,
         title: "Describe or share your current friends, group, or the people you spend the most time with.",
         prompt: "Tell us about the people you spend time with these days — old friends, new connections, or a mix. What role do they play in your life right now?",
-        placeholder: "Your circle, community, colleagues, business partners...",
+        placeholder: "Your circle, community, colleagues, friends...",
         type: "textarea"
       },
       {
@@ -113,7 +114,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 4,
         title: "Describe your family relationships.",
         prompt: "How do you feel about your family relationships? What role does your family play in your current life? Are these relationships close, complicated, supportive, or distant? How has your family shaped who you are today? What are the dynamics like, and how much influence do they have on your life decisions and daily experience? Share as much detail as you can about your family connections and how they impact you.",
-        placeholder: "Dynamics with parents, siblings, emotional closeness or distance...",
+        placeholder: "Dynamics with family members, emotional closeness or distance...",
         type: "textarea"
       },
       {
@@ -129,7 +130,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 6,
         title: "What does your typical day look like from wake-up to bedtime?",
         prompt: "Include your daily habits (both good and bad), work, personal time, and how you feel throughout.",
-        placeholder: "Morning routine, work shifts, habits, evening wind-down...",
+        placeholder: "Morning routine, work rhythm, evening habits, wind-down...",
         type: "textarea"
       },
       {
@@ -145,7 +146,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 8,
         title: "What is your current financial situation?",
         prompt: "Include your annual income, savings, and debt as you see fit. Beyond the numbers, how do you feel about your financial position? What are your biggest financial priorities or concerns? How has your relationship with money shaped your daily decisions and future planning? Share whatever level of detail feels appropriate about both the practical and emotional aspects of your finances.",
-        placeholder: "Monthly income, expenses, debts, loans, feelings about money...",
+        placeholder: "Monthly income, expenses, debts, feelings about money...",
         type: "textarea"
       },
       {
@@ -161,7 +162,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 10,
         title: "What specific things consistently prevent you from taking action toward your goals?",
         prompt: "Include both external obstacles (things outside your control like time, money, other people, circumstances) and internal resistance (fears, self-doubt, perfectionism, procrastination, limiting beliefs). Give examples of each and explain how they specifically hold you back.",
-        placeholder: "Internal resistance, laziness, fear of the hard path...",
+        placeholder: "Internal resistance, hesitation, fear of the hard path...",
         type: "textarea"
       },
       {
@@ -169,7 +170,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 11,
         title: "What things do you worry about in the future?",
         prompt: "Be specific about your fears and anxieties about what's ahead. Do you worry more about things within your control or outside your control? How do these worries manifest - do they motivate you to take action or paralyze you? What future scenarios play out in your mind most often?",
-        placeholder: "Fears regarding finances, mediocrity, potential...",
+        placeholder: "Fears regarding finances, potential, future milestones...",
         type: "textarea"
       }
     ]
@@ -206,7 +207,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 4,
         title: "Describe or add photos of your dream home.",
         prompt: "Show different angles of the same home - inside, outside, and the features that stand out to you. Explain why you chose this specific home and what it represents about your ideal lifestyle. Be specific about the location, size, style, and features that appeal to you.",
-        placeholder: "Location (e.g. New Zealand, Dubai), architecture, feeling of safety/calm...",
+        placeholder: "Location, architecture, feeling of safety/calm...",
         type: "textarea"
       },
       {
@@ -214,7 +215,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 5,
         title: "Describe or add photos of your dream car.",
         prompt: "Show different angles of the same car - exterior, interior, and the features you love about it. Explain what this car represents to you and why you chose it. What does this vehicle say about your personality, values, or lifestyle aspirations?",
-        placeholder: "Specific vehicles (e.g. Audi R8, Pagani, Vanquish) and what they symbolize...",
+        placeholder: "Specific vehicles and what they symbolize...",
         type: "textarea"
       },
       {
@@ -230,7 +231,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 7,
         title: "Describe or add photos showing your dream fashion style.",
         prompt: "Describe what these fashion styles represent to you and how they align with who you are. Consider the emotions, confidence, or energy this aesthetic evokes and why it resonates with your personal vision. Share what wearing this style would mean for how you express yourself and move through the world.",
-        placeholder: "Your aesthetic (e.g. clean plain shirt & pants, quiet confidence)...",
+        placeholder: "Your aesthetic and personal expression...",
         type: "textarea"
       },
       {
@@ -238,7 +239,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 8,
         title: "What are some activities and hobbies you want to enjoy?",
         prompt: "Explain why these activities and hobbies are important to your dream lifestyle.",
-        placeholder: "Traveling, track driving, swimming, culinary experiences...",
+        placeholder: "Traveling, hobbies, athletic pursuits, creative crafts...",
         type: "textarea"
       },
       {
@@ -246,7 +247,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 9,
         title: "Describe or add photos of your dream fitness level.",
         prompt: "How does this fitness level align with your dream lifestyle? What would this level of health and strength allow you to do in your ideal life? How would feeling this good in your body impact your ability to pursue your other goals and dreams? What does peak physical wellness mean for living your best life?",
-        placeholder: "Physical vitality, energy, looking and feeling grounded...",
+        placeholder: "Physical vitality, energy, feeling grounded...",
         type: "textarea"
       },
       {
@@ -254,7 +255,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 10,
         title: "What does your perfect day look like from morning to night?",
         prompt: "Include both personal time and business activities - describe your entire ideal day from start to finish.",
-        placeholder: "From morning tea/coffee to focused work, family dinner, evening recreation...",
+        placeholder: "From morning routine to focused work, meals, recreation...",
         type: "textarea"
       }
     ]
@@ -275,7 +276,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 2,
         title: "How have you been feeling about your life overall in recent months?",
         prompt: "Optimistic, stuck, frustrated, content, etc. What's contributing to these feelings? Are you in a good place mentally and emotionally, or going through a rough patch? What aspects of your life are working well, and what feels challenging or disappointing right now?",
-        placeholder: "Relief vs. frustration, playing small, feeling stuck...",
+        placeholder: "Current headspace, challenges, and aspirations...",
         type: "textarea"
       },
       {
@@ -307,7 +308,7 @@ const QUESTIONNAIRE_SCHEMA = {
         num: 6,
         title: "Looking at the people you admire, can you see how your current identity might conflict with what you need to become to achieve your dreams?",
         prompt: "Explain the internal conflicts you notice between who you are now and who you need to become.",
-        placeholder: "Internal conflicts: comfort vs. discipline, builder vs. quitter...",
+        placeholder: "Internal conflicts between current habits and future potential...",
         type: "textarea"
       },
       {
@@ -328,50 +329,6 @@ const QUESTIONNAIRE_SCHEMA = {
       }
     ]
   }
-};
-
-const DEMO_RESPONSES = {
-  ch1_q1: "Dzikri Feeroz, 29",
-  ch1_q2: "When I was small, it was a really tough environment for me to live in. I was bullied in school, I was bullied by my brothers. My parents were abusive. But I still go through everything with a smile. Some people do trust me, but I don't really trust in myself. People do say that I can do better things, but I just don't see the vision. I know I can be one of the best. But it's always cloudy water It's not a clear vision for me to see what's the best potential that I could give. I try to be the best that I can, but I keep giving up halfway or I don't see any progress. Because I really do not know if it's because of the people I trust. For example, one of my friends that asked me to join his business, he promised me a few months and I will get rich. I stayed for almost two years and I've got nothing out of it. So it's really hard for me to see that I can grow a big income from business, where I see the struggles of a lot of owners. I really need that mentor that will help me to improve my vision of how I can be because most of the owners that I know they are either broke or they have closed down shop.",
-  ch1_q3: "I was from the filming industry where I thought I wanna be in a production. Then I was brought in by my friend to be a videographer for a social media production. That was when I changed my line from film production to social media videographer. So I learnt all the videographing tips and how to edit like a social media expert. At a point of time I feel like I was being cheated by my friend that was paying me the bills. I know that he was getting a lot of money and I'm only getting a quarter out of it, even though we are doing things together. For example, he was earning 2,000, I was only earning 400. That taught me in the future if I want to be a business owner to be fair with my future employees. Then there was another business from another friend where they promised me a four-digit income in six months. It's been three years, and my monthly income is $200. So that's another thing that I learned: not to give false hope to someone.",
-  ch1_q4: "The environment that I lived in was where we would waste our time every single day in someone's house doing stupid things and just thinking that I had no responsibility for the rest of my life. That is why I've always gone the easy route of just being simple with life. My uncle's house is a 3-storey bungalow, which is one of the reasons I want to get a bungalow for my family, with a Rolls Royce and BMW parked outside for Hari Raya celebrations.",
-  ch1_q5: "When I was young, my father was a high-ranking officer, so I could get whatever I wanted like iPad, iPhone, PC. Every day I got school money, so I didn't have the mindset of needing to work. After the divorce, that comfort disappeared. My mother didn't have jobs, so sometimes I would go to school not eating, just drinking water. Money in my life now is something I spend without saving. Recently I had a wake-up call to pay my loans, and I paid them off in less than 2 months by working hard.",
-  ch1_q6: "Hard experiences have been trusting people who promised four-digit incomes while they themselves were struggling. I stayed for three years with $200/month income and quit my job for that. It makes me skeptical and silent.",
-  ch1_q7: "Quitting that business and realizing that I can actually survive on my own when things get hard. Working freelance or doing delivery shifts taught me I can move fast when there is a clear deadline in front of me.",
-  ch1_q8: "Recently earning almost $5,000 in a month from working hard, which helped me pay off my overdue loans. It proved to myself that I am capable of hard work when I set my mind to it.",
-  ch1_q9: "I keep giving up on my projects. I started doing AI websites for business owners, but I had this laziness of wanting to call people. I tend to be a perfectionist where I work and tweak things without launching and making money.",
-
-  ch2_q1: "I want to be a rich person and earn a lot of money. When I hit a struggle, I retreat to my comfortable delivery job. I lack patience in business because I have failed too many times.",
-  ch2_q2: "Currently living alone in an apartment in Singapore. Working every day to pay bills, and recently started saving.",
-  ch2_q3: "My friends are the ones who brought me into the business where I earned $200/month. They are not bad people, but I stepped back because I couldn't stand earning that little.",
-  ch2_q4: "My family is there, but not there. I live alone. I was bullied by them as a kid, so I keep a distance personally. We have fun and laugh when we meet now, but I don't open up easily.",
-  ch2_q5: "I have a girlfriend. I buy things for her and try to make her life comfortable. I want to build a life where she does not have to work.",
-  ch2_q6: "Wake up, 15 minutes on Instagram, shower, work shift 9am to 2pm, break 2pm to 4pm, second shift 4pm to 8pm doing food delivery. Nights are spent tinkering with AI or watching YouTube.",
-  ch2_q7: "Current delivery career is frustrating because it has no long-term future. I want to be an owner and leader that employees look up to for guidance and decisions.",
-  ch2_q8: "Earning around $3,000/month when working every day. If I stop, it drops to zero. Currently paying off phone plans and loans, but recently cleared major debts.",
-  ch2_q9: "Strengths: Fast learner, passionate about AI, goal-driven when the target is clear. Weaknesses: Laziness in execution, overthinking, procrastination, quitting when the end goal feels distant.",
-  ch2_q10: "Self-doubt, laziness, wanting to take the easy route instead of embracing discomfort.",
-  ch2_q11: "Worrying about money, becoming ordinary, and not reaching the big expectations I have for myself.",
-
-  ch3_q1: "1. Alex Hormozi — genuine, teaches things that actually work, practical utility over hype.\n2. Andrew Tate — extreme confidence, certainty, and unapologetic self-belief.",
-  ch3_q2: "Provide for my family within the next 5 years, achieve complete financial freedom, own my dream home and cars.",
-  ch3_q3: "Being able to support and provide for my family fully, not worrying about bills, owning an Audi R8, Aston Martin Vanquish, or Pagani Huayra.",
-  ch3_q4: "A modern, open, and calm home with large glass windows and a swimming pool, located in New Zealand surrounded by mountains or in Dubai.",
-  ch3_q5: "Audi R8, Aston Martin Vanquish, and Pagani Huayra Roadster. Symbolizes confidence, control, and reward for hard work.",
-  ch3_q6: "New Zealand and Switzerland — green landscapes, fresh mountain air, quiet open space.",
-  ch3_q7: "Clean plain shirt and plain pants — neat, effortless, calm confidence without needing to show off.",
-  ch3_q8: "Traveling freely and driving fast on a racetrack.",
-  ch3_q9: "Lean, athletic, and energetic physique so I never feel weak or lazy, supporting an active life.",
-  ch3_q10: "Wake up with coffee/tea, short focused high-impact work block, quality peaceful dinner with family, swim or gym session in the evening.",
-
-  ch4_q1: "Money and security — it is the driving factor right now that allows me to move, breathe, and support those I care about.",
-  ch4_q2: "A mix of relief (having active income) and frustration (knowing I am standing on the edge instead of fully stepping into my potential).",
-  ch4_q3: "Calm about money, acts with purpose not panic, works without overthinking, reliable, finishes what he starts.",
-  ch4_q4: "1. Self-discipline\n2. Strong leader\n3. Confidence\n4. Patience\n5. Growth mindset",
-  ch4_q5: "Clinging to the safety of a comfortable routine, fear of the uncomfortable path, and the habit of giving up when things get slow or boring.",
-  ch4_q6: "Current identity retreats to comfort and gives up easily, whereas the person I need to become stays in the work when nobody is clapping.",
-  ch4_q7: "DISCIPLINE. The ability to keep going when progress is slow and motivation has faded.",
-  ch4_q8: "Looking back 3-5 years from now with the exact same half-built plans, excuses, and the regret of almost becoming who I wanted to be."
 };
 
 // State
@@ -448,12 +405,12 @@ function saveAnswersToStorage() {
   document.querySelectorAll('.form-control').forEach(input => {
     data[input.id] = input.value;
   });
-  localStorage.setItem('alchemy_manifesto_answers', JSON.stringify(data));
+  localStorage.setItem('alchemy_assessment_answers', JSON.stringify(data));
 }
 
 function loadSavedAnswers() {
   try {
-    const raw = localStorage.getItem('alchemy_manifesto_answers');
+    const raw = localStorage.getItem('alchemy_assessment_answers');
     if (!raw) return;
     const data = JSON.parse(raw);
     Object.keys(data).forEach(id => {
@@ -532,9 +489,8 @@ function initWizardNavigation() {
   updateStepView();
 }
 
-// Form Actions: Load Demo, Clear, Generate
+// Form Actions: Clear, Generate
 function initFormActions() {
-  const btnLoadDemo = document.getElementById('btn-load-demo');
   const btnClear = document.getElementById('btn-clear-form');
   const btnGenerate = document.getElementById('btn-generate');
   const btnBack = document.getElementById('btn-back');
@@ -552,29 +508,19 @@ function initFormActions() {
   let loadingInterval = null;
 
   const loadingPhrases = [
-    "Analyzing early childhood conditioning and survival reflexes...",
-    "Decoding the root emotional drivers behind material goals...",
-    "Reframing self-doubt into unintegrated potential...",
+    "Analyzing childhood conditioning and survival reflexes...",
+    "Decoding the root emotional drivers behind personal goals...",
+    "Reframing hesitation into unintegrated potential...",
     "Harmonizing role models with the emerging archetype...",
     "Forging the Future Self identity manifesto...",
     "Drafting the formal Personal Transformation Agreement..."
   ];
 
-  // Load Demo
-  btnLoadDemo.addEventListener('click', () => {
-    Object.keys(DEMO_RESPONSES).forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.value = DEMO_RESPONSES[id];
-    });
-    saveAnswersToStorage();
-    alert("✅ Loaded Dzikri's answers across all 38 questions in all 4 chapters!");
-  });
-
   // Clear Form
   btnClear.addEventListener('click', () => {
     if (confirm("Are you sure you want to clear all responses?")) {
       document.querySelectorAll('.form-control').forEach(input => input.value = '');
-      localStorage.removeItem('alchemy_manifesto_answers');
+      localStorage.removeItem('alchemy_assessment_answers');
     }
   });
 
@@ -608,12 +554,11 @@ function initFormActions() {
   btnGenerate.addEventListener('click', async () => {
     const { clientName, fullText } = compileFullQuestionnaireText();
 
-    // Verify there is at least some content
     const totalFilled = Object.values(document.querySelectorAll('.form-control'))
       .filter(input => input.value.trim().length > 0).length;
 
-    if (totalFilled < 3) {
-      alert("Please answer at least a few questions before generating your manifesto, or click '⚡ Load Demo Answers' to test!");
+    if (totalFilled < 2) {
+      alert("Please answer at least a few questions before generating your manifesto.");
       return;
     }
 
@@ -659,7 +604,7 @@ function initFormActions() {
       clearInterval(loadingInterval);
       loadingSection.classList.add('hidden');
       wizardSection.classList.remove('hidden');
-      alert(`Generation failed: ${err.message}\n\nPlease check serverless function logs on Netlify.`);
+      alert(`Generation failed: ${err.message}`);
     }
   });
 
@@ -684,7 +629,7 @@ function initFormActions() {
   btnDownloadMd.addEventListener('click', () => {
     if (!currentRawMarkdown) return;
     const nameInput = document.getElementById('ch1_q1');
-    const name = nameInput ? nameInput.value.split(',')[0].trim().replace(/\s+/g, '_') : 'Client';
+    const name = nameInput && nameInput.value.trim() ? nameInput.value.split(',')[0].trim().replace(/\s+/g, '_') : 'My';
     const blob = new Blob([currentRawMarkdown], { type: 'text/markdown;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
