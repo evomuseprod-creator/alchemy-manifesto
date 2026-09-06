@@ -1,0 +1,57 @@
+{
+  "client_info": {
+    "name": "Full Name",
+    "age": 29
+  },
+  "chapter_1_personal_history": {
+    "childhood_environment": "Describe the atmosphere, environment, messages from parents/teachers...",
+    "educational_career_path": "Major transitions, jobs, lessons learned about fairness and work...",
+    "childhood_photo_description": "Description of childhood home / environment photos...",
+    "role_of_money": "Relationship with money growing up (abundance, scarcity, changes)...",
+    "defining_moments": "Hard experiences, lessons, turning points...",
+    "recent_significant_change": "Quitting jobs, discovering self-reliance, survival...",
+    "turning_point_photo_proof": "Proof of milestone (e.g. debt repayment, income slip)...",
+    "repeating_patterns": "Belief systems, giving up halfway, perfectionism..."
+  },
+  "chapter_2_current_reality": {
+    "three_sentence_description": "Current temperament and mindset...",
+    "living_situation": "Location, living space, daily impact...",
+    "current_social_circle": "Friends, business partners, community...",
+    "family_dynamics": "Current relationship with family and boundaries...",
+    "romantic_status": "Partner, relationship goals, supporting loved ones...",
+    "typical_daily_schedule": "Wake-up to bedtime habits and routines...",
+    "current_career_feelings": "Frustrations, income caps, desire for leadership...",
+    "financial_position": "Monthly earnings, debts, loans, savings...",
+    "strengths_and_weaknesses": "Top strengths vs. honest weaknesses...",
+    "action_blockers": "External obstacles vs. internal resistance...",
+    "future_worries": "Fears regarding money, mediocrity, and potential..."
+  },
+  "chapter_3_inspirations_dream_life": {
+    "admired_figures": "3 people admired and specific traits respected...",
+    "top_3_goals": "Transformation goals with 3-5 year timelines...",
+    "financial_freedom_definition": "Target income, freedom to provide, peace of mind...",
+    "dream_home": "Location, architecture, feelings evoked (safety, calm)...",
+    "dream_vehicles": "Cars and what they symbolize regarding confidence and control...",
+    "ideal_travel_destinations": "Countries, environments, scenery...",
+    "dream_aesthetic_fashion": "Clothing style, simplicity, effortless confidence...",
+    "hobbies_activities": "Track driving, travel, family dinners...",
+    "dream_fitness": "Physical energy, confidence, vitality...",
+    "perfect_day": "Ideal routine from morning to night..."
+  },
+  "chapter_4_future_self": {
+    "core_priority_now": "What matters most right now (e.g. money, security)...",
+    "recent_emotional_state": "Feelings of relief vs. urgency to step up...",
+    "future_self_competencies": "Skills, mindset, decisiveness of future self...",
+    "five_character_traits": [
+      "Self-discipline",
+      "Strong leader",
+      "Confidence",
+      "Patience",
+      "Growth mindset"
+    ],
+    "limiting_beliefs_to_shed": "Thoughts that stop action before starting...",
+    "identity_conflicts": "Current habits vs. person required for the dream...",
+    "the_keystone_change": "The single foundational shift (Discipline)...",
+    "ultimate_regret": "What hurts most if nothing changes in 3-5 years..."
+  }
+}

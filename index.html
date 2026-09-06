@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alchemy of Self — Personal Manifesto Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Marked for markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="hero">
+      <div class="logo-mark">
+        <svg viewBox="0 0 100 100" width="50" height="50">
+          <circle cx="50" cy="40" r="28" fill="none" stroke="#D4AF37" stroke-width="2.5" opacity="0.8"/>
+          <circle cx="36" cy="62" r="28" fill="none" stroke="#CBD5E0" stroke-width="2.5" opacity="0.6"/>
+          <circle cx="64" cy="62" r="28" fill="none" stroke="#A0AEC0" stroke-width="2.5" opacity="0.6"/>
+          <circle cx="50" cy="54" r="7" fill="#D4AF37"/>
+        </svg>
+      </div>
+      <h1 class="brand-title">ALCHEMY OF SELF</h1>
+      <p class="brand-subtitle">Personal Transformation Manifesto Engine</p>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="app-main">
+      <!-- Input Section -->
+      <section id="input-section" class="card">
+        <div class="card-header">
+          <div>
+            <h2>Questionnaire & Reflections</h2>
+            <p class="section-desc">Answer the questions across the chapters, or paste raw notes directly.</p>
+          </div>
+          <button id="btn-load-demo" class="btn btn-secondary" title="Load Dzikri's responses as an example">
+            Load Demo Answers
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label for="client-name">Your Full Name</label>
+          <input type="text" id="client-name" placeholder="e.g. Dzikri Feeroz" value="Dzikri Feeroz">
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs-nav">
+          <button class="tab-btn active" data-tab="tab-all">Full / Quick Paste</button>
+          <button class="tab-btn" data-tab="tab-ch1">Chapter 1</button>
+          <button class="tab-btn" data-tab="tab-ch2">Chapter 2</button>
+          <button class="tab-btn" data-tab="tab-ch3">Chapter 3</button>
+          <button class="tab-btn" data-tab="tab-ch4">Chapter 4</button>
+        </nav>
+
+        <!-- Tab Contents -->
+        <div class="tab-content">
+          <!-- Full text paste -->
+          <div id="tab-all" class="tab-pane active">
+            <label for="full-input">Paste All Questionnaire Responses or Notes Here:</label>
+            <textarea id="full-input" rows="18" placeholder="Paste your answers for Chapters 1-4 here..."></textarea>
+          </div>
+
+          <!-- Chapter 1 -->
+          <div id="tab-ch1" class="tab-pane">
+            <div class="chapter-info">
+              <h3>Chapter 1: Personal History & Foundation</h3>
+              <p>Childhood environment, family dynamics, money swings, early career lessons, and root experiences.</p>
+            </div>
+            <textarea id="ch1-input" rows="14" placeholder="Your reflections for Chapter 1..."></textarea>
+          </div>
+
+          <!-- Chapter 2 -->
+          <div id="tab-ch2" class="tab-pane">
+            <div class="chapter-info">
+              <h3>Chapter 2: Current Reality & Present Self</h3>
+              <p>Where you live, daily schedule, relationships, current financial position, strengths & weaknesses.</p>
+            </div>
+            <textarea id="ch2-input" rows="14" placeholder="Your reflections for Chapter 2..."></textarea>
+          </div>
+
+          <!-- Chapter 3 -->
+          <div id="tab-ch3" class="tab-pane">
+            <div class="chapter-info">
+              <h3>Chapter 3: Inspirations & Dream Life</h3>
+              <p>People you admire, top goals, financial freedom definition, dream home, cars, travel, and perfect day.</p>
+            </div>
+            <textarea id="ch3-input" rows="14" placeholder="Your reflections for Chapter 3..."></textarea>
+          </div>
+
+          <!-- Chapter 4 -->
+          <div id="tab-ch4" class="tab-pane">
+            <div class="chapter-info">
+              <h3>Chapter 4: Future Self & Keystone Change</h3>
+              <p>Top priorities, 5 character traits, self-sabotaging patterns to shed, discipline, and eliminating regret.</p>
+            </div>
+            <textarea id="ch4-input" rows="14" placeholder="Your reflections for Chapter 4..."></textarea>
+          </div>
+        </div>
+
+        <div class="actions-bar">
+          <button id="btn-generate" class="btn btn-primary">
+            <span class="btn-text">Generate My Manifesto</span>
+            <span class="btn-subtext">Powered by DeepSeek</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Loading State -->
+      <section id="loading-section" class="card hidden">
+        <div class="loading-container">
+          <div class="spinner"></div>
+          <h3 id="loading-message">Deconstructing subconscious patterns...</h3>
+          <p class="loading-subtext">DeepSeek is translating raw reflections into an elevated 4-part transformation manifesto.</p>
+        </div>
+      </section>
+
+      <!-- Results View -->
+      <section id="result-section" class="card hidden">
+        <div class="result-toolbar">
+          <div class="toolbar-left">
+            <button id="btn-back" class="btn btn-secondary">← Edit Inputs</button>
+          </div>
+          <div class="toolbar-right">
+            <button id="btn-copy" class="btn btn-outline">Copy Text</button>
+            <button id="btn-download-md" class="btn btn-outline">Download .md</button>
+            <button id="btn-print-pdf" class="btn btn-primary">Print / Save as PDF</button>
+          </div>
+        </div>
+
+        <div id="manifesto-display" class="manifesto-content printable">
+          <!-- Rendered markdown inserted here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>Alchemy of Self • Built for high-agency transformation</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
