@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alchemy of Self — Personal Manifesto Generator</title>
+  <title>Alchemy of Self — Personal Manifesto Assessment</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <!-- Header -->
     <header class="hero">
       <div class="logo-mark">
-        <svg viewBox="0 0 100 100" width="50" height="50">
+        <svg viewBox="0 0 100 100" width="56" height="56">
           <circle cx="50" cy="40" r="28" fill="none" stroke="#D4AF37" stroke-width="2.5" opacity="0.8"/>
           <circle cx="36" cy="62" r="28" fill="none" stroke="#CBD5E0" stroke-width="2.5" opacity="0.6"/>
           <circle cx="64" cy="62" r="28" fill="none" stroke="#A0AEC0" stroke-width="2.5" opacity="0.6"/>
@@ -24,96 +24,96 @@
         </svg>
       </div>
       <h1 class="brand-title">ALCHEMY OF SELF</h1>
-      <p class="brand-subtitle">Personal Transformation Manifesto Engine</p>
+      <p class="brand-subtitle">The 4-Chapter Personal Transformation Assessment</p>
     </header>
 
     <!-- Main Content Area -->
     <main id="app-main">
-      <!-- Input Section -->
-      <section id="input-section" class="card">
-        <div class="card-header">
-          <div>
-            <h2>Questionnaire & Reflections</h2>
-            <p class="section-desc">Answer the questions across the chapters, or paste raw notes directly.</p>
+      <!-- Questionnaire Wizard Section -->
+      <section id="wizard-section" class="card">
+        <!-- Wizard Top Bar -->
+        <div class="wizard-header">
+          <div class="step-indicator">
+            <span class="step-pill active" data-step="1">1. History</span>
+            <span class="step-pill" data-step="2">2. Present</span>
+            <span class="step-pill" data-step="3">3. Dreams</span>
+            <span class="step-pill" data-step="4">4. Future Self</span>
           </div>
-          <button id="btn-load-demo" class="btn btn-secondary" title="Load Dzikri's responses as an example">
-            Load Demo Answers
-          </button>
-        </div>
-
-        <div class="form-group">
-          <label for="client-name">Your Full Name</label>
-          <input type="text" id="client-name" placeholder="e.g. Dzikri Feeroz" value="Dzikri Feeroz">
-        </div>
-
-        <!-- Navigation Tabs -->
-        <nav class="tabs-nav">
-          <button class="tab-btn active" data-tab="tab-all">Full / Quick Paste</button>
-          <button class="tab-btn" data-tab="tab-ch1">Chapter 1</button>
-          <button class="tab-btn" data-tab="tab-ch2">Chapter 2</button>
-          <button class="tab-btn" data-tab="tab-ch3">Chapter 3</button>
-          <button class="tab-btn" data-tab="tab-ch4">Chapter 4</button>
-        </nav>
-
-        <!-- Tab Contents -->
-        <div class="tab-content">
-          <!-- Full text paste -->
-          <div id="tab-all" class="tab-pane active">
-            <label for="full-input">Paste All Questionnaire Responses or Notes Here:</label>
-            <textarea id="full-input" rows="18" placeholder="Paste your answers for Chapters 1-4 here..."></textarea>
-          </div>
-
-          <!-- Chapter 1 -->
-          <div id="tab-ch1" class="tab-pane">
-            <div class="chapter-info">
-              <h3>Chapter 1: Personal History & Foundation</h3>
-              <p>Childhood environment, family dynamics, money swings, early career lessons, and root experiences.</p>
-            </div>
-            <textarea id="ch1-input" rows="14" placeholder="Your reflections for Chapter 1..."></textarea>
-          </div>
-
-          <!-- Chapter 2 -->
-          <div id="tab-ch2" class="tab-pane">
-            <div class="chapter-info">
-              <h3>Chapter 2: Current Reality & Present Self</h3>
-              <p>Where you live, daily schedule, relationships, current financial position, strengths & weaknesses.</p>
-            </div>
-            <textarea id="ch2-input" rows="14" placeholder="Your reflections for Chapter 2..."></textarea>
-          </div>
-
-          <!-- Chapter 3 -->
-          <div id="tab-ch3" class="tab-pane">
-            <div class="chapter-info">
-              <h3>Chapter 3: Inspirations & Dream Life</h3>
-              <p>People you admire, top goals, financial freedom definition, dream home, cars, travel, and perfect day.</p>
-            </div>
-            <textarea id="ch3-input" rows="14" placeholder="Your reflections for Chapter 3..."></textarea>
-          </div>
-
-          <!-- Chapter 4 -->
-          <div id="tab-ch4" class="tab-pane">
-            <div class="chapter-info">
-              <h3>Chapter 4: Future Self & Keystone Change</h3>
-              <p>Top priorities, 5 character traits, self-sabotaging patterns to shed, discipline, and eliminating regret.</p>
-            </div>
-            <textarea id="ch4-input" rows="14" placeholder="Your reflections for Chapter 4..."></textarea>
+          <div class="header-actions">
+            <button id="btn-load-demo" class="btn btn-secondary btn-sm" title="Pre-fill all 38 questions with Dzikri's story to test">
+              ⚡ Load Demo Answers
+            </button>
+            <button id="btn-clear-form" class="btn btn-outline btn-sm" title="Reset all fields">
+              Clear
+            </button>
           </div>
         </div>
 
-        <div class="actions-bar">
-          <button id="btn-generate" class="btn btn-primary">
-            <span class="btn-text">Generate My Manifesto</span>
-            <span class="btn-subtext">Powered by DeepSeek</span>
-          </button>
+        <div class="progress-bar-container">
+          <div id="progress-bar" class="progress-bar" style="width: 25%;"></div>
         </div>
+
+        <!-- Chapter Containers -->
+        <form id="manifesto-form" onsubmit="return false;">
+          <!-- CHAPTER 1 -->
+          <div class="chapter-step active" id="chapter-1">
+            <div class="chapter-banner">
+              <span class="chapter-badge">Chapter 1</span>
+              <h2>Personal History & Foundation</h2>
+              <p>Uncovering your roots, early environment, money dynamics, and subconscious survival reflexes.</p>
+            </div>
+            <div class="questions-list" id="q-list-ch1"></div>
+          </div>
+
+          <!-- CHAPTER 2 -->
+          <div class="chapter-step" id="chapter-2">
+            <div class="chapter-banner">
+              <span class="chapter-badge">Chapter 2</span>
+              <h2>Current Reality & Present Self</h2>
+              <p>A brutally honest audit of your daily routine, relationships, career, finances, and habits.</p>
+            </div>
+            <div class="questions-list" id="q-list-ch2"></div>
+          </div>
+
+          <!-- CHAPTER 3 -->
+          <div class="chapter-step" id="chapter-3">
+            <div class="chapter-banner">
+              <span class="chapter-badge">Chapter 3</span>
+              <h2>Inspirations & Dream Life</h2>
+              <p>Decoding your role models, lifestyle aspirations, dream possessions, and ideal days.</p>
+            </div>
+            <div class="questions-list" id="q-list-ch3"></div>
+          </div>
+
+          <!-- CHAPTER 4 -->
+          <div class="chapter-step" id="chapter-4">
+            <div class="chapter-banner">
+              <span class="chapter-badge">Chapter 4</span>
+              <h2>Future Self & The Keystone Change</h2>
+              <p>The identity manifesto: 5 defining character traits, slaying limiting beliefs, and committing to discipline.</p>
+            </div>
+            <div class="questions-list" id="q-list-ch4"></div>
+          </div>
+
+          <!-- Wizard Navigation Controls -->
+          <div class="wizard-footer">
+            <button type="button" id="btn-prev" class="btn btn-secondary" style="display: none;">← Previous Chapter</button>
+            <div class="footer-spacer"></div>
+            <button type="button" id="btn-next" class="btn btn-primary">Next: Chapter 2 →</button>
+            <button type="button" id="btn-generate" class="btn btn-gold" style="display: none;">
+              <span class="btn-text">✨ Generate My Manifesto</span>
+              <span class="btn-subtext">DeepSeek AI Transformation</span>
+            </button>
+          </div>
+        </form>
       </section>
 
       <!-- Loading State -->
       <section id="loading-section" class="card hidden">
         <div class="loading-container">
           <div class="spinner"></div>
-          <h3 id="loading-message">Deconstructing subconscious patterns...</h3>
-          <p class="loading-subtext">DeepSeek is translating raw reflections into an elevated 4-part transformation manifesto.</p>
+          <h3 id="loading-message">Analyzing childhood conditioning and survival reflexes...</h3>
+          <p class="loading-subtext">DeepSeek V3 is synthesizing all 4 chapters into your personalized 12-page transformation manifesto.</p>
         </div>
       </section>
 
@@ -121,7 +121,7 @@
       <section id="result-section" class="card hidden">
         <div class="result-toolbar">
           <div class="toolbar-left">
-            <button id="btn-back" class="btn btn-secondary">← Edit Inputs</button>
+            <button id="btn-back" class="btn btn-secondary">← Back to Questions</button>
           </div>
           <div class="toolbar-right">
             <button id="btn-copy" class="btn btn-outline">Copy Text</button>
