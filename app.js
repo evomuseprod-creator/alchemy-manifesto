@@ -592,6 +592,7 @@ function initFormActions() {
 
       const data = await response.json();
       currentRawMarkdown = data.manifesto;
+      window.currentRawMarkdown = currentRawMarkdown;
 
       // Render Markdown
       manifestoDisplay.innerHTML = marked.parse(currentRawMarkdown);

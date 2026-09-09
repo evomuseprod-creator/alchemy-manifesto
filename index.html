@@ -3,45 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alchemy of Self — Personal Transformation Assessment</title>
+  <title>NOBODY — Identity Assessment & Manifesto Protocol</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='38' fill='none' stroke='%23FF4D19' stroke-width='14'/></svg>">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <!-- Marked for markdown rendering -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <div class="app-container">
-    <!-- Header -->
-    <header class="hero">
-      <div class="logo-mark">
-        <svg viewBox="0 0 100 100" width="56" height="56">
-          <circle cx="50" cy="40" r="28" fill="none" stroke="#D4AF37" stroke-width="2.5" opacity="0.8"/>
-          <circle cx="36" cy="62" r="28" fill="none" stroke="#CBD5E0" stroke-width="2.5" opacity="0.6"/>
-          <circle cx="64" cy="62" r="28" fill="none" stroke="#A0AEC0" stroke-width="2.5" opacity="0.6"/>
-          <circle cx="50" cy="54" r="7" fill="#D4AF37"/>
-        </svg>
+  <div class="wrap">
+    <!-- Masthead & Studio Furniture -->
+    <header class="masthead">
+      <div class="filemeta">
+        <span>STUDIO PROTOCOL <b>· TAKE 01</b></span>
+        <span>SPEC <b>· 38 QUESTIONS</b></span>
+        <span>SYSTEM <b>· SYNTHETIC IDENTITY ARCHITECTURE</b></span>
+        <span>CONFIDENTIAL <b>· DOSSIER</b></span>
       </div>
-      <h1 class="brand-title">ALCHEMY OF SELF</h1>
-      <p class="brand-subtitle">The 4-Chapter Personal Transformation Assessment</p>
+
+      <div class="plate">
+        <img src="nobody-wordmark.svg" alt="NOBODY" class="brand-logo">
+      </div>
+
+      <h1 class="tagline">YOUR BEST SELF <em>DOESN'T EXIST.</em> YET.</h1>
+      <p class="standfirst">
+        Thirty-eight questions across four studio movements. Raw reflections decoded into a 12-page synthetic transformation manifesto.
+      </p>
     </header>
 
     <!-- Main Content Area -->
     <main id="app-main">
       <!-- Questionnaire Wizard Section -->
-      <section id="wizard-section" class="card">
+      <section id="wizard-section" class="studio-card">
         <!-- Wizard Top Bar -->
         <div class="wizard-header">
           <div class="step-indicator">
-            <span class="step-pill active" data-step="1">1. History</span>
-            <span class="step-pill" data-step="2">2. Present</span>
-            <span class="step-pill" data-step="3">3. Dreams</span>
-            <span class="step-pill" data-step="4">4. Future Self</span>
+            <button type="button" class="step-pill active" data-step="1"><span>01</span> HISTORY</button>
+            <button type="button" class="step-pill" data-step="2"><span>02</span> PRESENT</button>
+            <button type="button" class="step-pill" data-step="3"><span>03</span> DREAMS</button>
+            <button type="button" class="step-pill" data-step="4"><span>04</span> FUTURE SELF</button>
           </div>
           <div class="header-actions">
-            <button id="btn-clear-form" class="btn btn-outline btn-sm" title="Reset all fields">
-              Clear All Fields
+            <button id="btn-clear-form" class="btn btn-utility" title="Reset all fields">
+              RESET FORM
             </button>
           </div>
         </div>
@@ -55,9 +61,9 @@
           <!-- CHAPTER 1 -->
           <div class="chapter-step active" id="chapter-1">
             <div class="chapter-banner">
-              <span class="chapter-badge">Chapter 1</span>
-              <h2>Personal History & Foundation</h2>
-              <p>Uncovering your roots, early environment, money dynamics, and subconscious survival reflexes.</p>
+              <span class="spine-num">01 / 04</span>
+              <h2>PERSONAL HISTORY & FOUNDATION</h2>
+              <p>Deconstructing the origin story: early environment, money dynamics, broken trust, and subconscious survival reflexes.</p>
             </div>
             <div class="questions-list" id="q-list-ch1"></div>
           </div>
@@ -65,9 +71,9 @@
           <!-- CHAPTER 2 -->
           <div class="chapter-step" id="chapter-2">
             <div class="chapter-banner">
-              <span class="chapter-badge">Chapter 2</span>
-              <h2>Current Reality & Present Self</h2>
-              <p>An honest audit of your daily routine, relationships, career, finances, and habits.</p>
+              <span class="spine-num">02 / 04</span>
+              <h2>CURRENT REALITY & PRESENT SELF</h2>
+              <p>A rigorous studio audit: routines, relationships, career bottlenecks, financial realities, and cognitive friction.</p>
             </div>
             <div class="questions-list" id="q-list-ch2"></div>
           </div>
@@ -75,9 +81,9 @@
           <!-- CHAPTER 3 -->
           <div class="chapter-step" id="chapter-3">
             <div class="chapter-banner">
-              <span class="chapter-badge">Chapter 3</span>
-              <h2>Inspirations & Dream Life</h2>
-              <p>Decoding your role models, lifestyle aspirations, dream possessions, and ideal days.</p>
+              <span class="spine-num">03 / 04</span>
+              <h2>INSPIRATIONS & DREAM LIFE</h2>
+              <p>Decoding aspirational models, lifestyle architecture, material symbols, and the ideal daily cadence.</p>
             </div>
             <div class="questions-list" id="q-list-ch3"></div>
           </div>
@@ -85,45 +91,46 @@
           <!-- CHAPTER 4 -->
           <div class="chapter-step" id="chapter-4">
             <div class="chapter-banner">
-              <span class="chapter-badge">Chapter 4</span>
-              <h2>Future Self & The Keystone Change</h2>
-              <p>The identity manifesto: 5 defining character traits, slaying limiting beliefs, and committing to discipline.</p>
+              <span class="spine-num">04 / 04</span>
+              <h2>FUTURE SELF & THE KEYSTONE CHANGE</h2>
+              <p>The operational creed: 5 defining character traits, slaying limiting beliefs, and locking the keystone shift.</p>
             </div>
             <div class="questions-list" id="q-list-ch4"></div>
           </div>
 
           <!-- Wizard Navigation Controls -->
           <div class="wizard-footer">
-            <button type="button" id="btn-prev" class="btn btn-secondary" style="display: none;">← Previous Chapter</button>
+            <button type="button" id="btn-prev" class="btn btn-secondary" style="display: none;">← PREVIOUS STAGE</button>
             <div class="footer-spacer"></div>
-            <button type="button" id="btn-next" class="btn btn-primary">Next: Chapter 2 →</button>
-            <button type="button" id="btn-generate" class="btn btn-gold" style="display: none;">
-              <span class="btn-text">✨ Generate My Manifesto</span>
-              <span class="btn-subtext">DeepSeek AI Transformation</span>
+            <button type="button" id="btn-next" class="btn btn-primary">NEXT: STAGE 02 →</button>
+            <button type="button" id="btn-generate" class="btn btn-flare" style="display: none;">
+              <span class="btn-text">SYNTHESIZE MANIFESTO</span>
+              <span class="btn-subtext">AI-POWERED IDENTITY RECONSTRUCTION</span>
             </button>
           </div>
         </form>
       </section>
 
       <!-- Loading State -->
-      <section id="loading-section" class="card hidden">
+      <section id="loading-section" class="studio-card hidden">
         <div class="loading-container">
-          <div class="spinner"></div>
-          <h3 id="loading-message">Analyzing childhood conditioning and survival reflexes...</h3>
-          <p class="loading-subtext">DeepSeek is synthesizing your reflections into a personalized transformation manifesto.</p>
+          <div class="ring-loader"></div>
+          <div class="loading-meta">PROCESSING PROTOCOL · PLEASE STAND BY</div>
+          <h3 id="loading-message">Deconstructing childhood conditioning and survival reflexes...</h3>
+          <p class="loading-subtext">Transforming raw responses into your 12-page NOBODY Identity Manifesto.</p>
         </div>
       </section>
 
       <!-- Results View -->
-      <section id="result-section" class="card hidden">
+      <section id="result-section" class="studio-card hidden">
         <div class="result-toolbar">
           <div class="toolbar-left">
-            <button id="btn-back" class="btn btn-secondary">← Back to Questions</button>
+            <button id="btn-back" class="btn btn-secondary">← EDIT RESPONSES</button>
           </div>
           <div class="toolbar-right">
-            <button id="btn-copy" class="btn btn-outline">Copy Text</button>
-            <button id="btn-download-md" class="btn btn-outline">Download .md</button>
-            <button id="btn-print-pdf" class="btn btn-primary">Print / Save as PDF</button>
+            <button id="btn-copy" class="btn btn-utility">COPY TEXT</button>
+            <button id="btn-download-md" class="btn btn-utility">EXPORT .MD</button>
+            <button id="btn-print-pdf" class="btn btn-flare-sm">PRINT / SAVE AS PDF</button>
           </div>
         </div>
 
@@ -133,9 +140,13 @@
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Lockup -->
     <footer class="site-footer">
-      <p>Alchemy of Self • Built for personal transformation</p>
+      <div class="footer-lockup">
+        <span class="footer-brand">NOBODY</span>
+        <span class="footer-rule">·</span>
+        <span class="footer-line">EVERY DELIVERABLE DISCLOSED AS AI</span>
+      </div>
     </footer>
   </div>
 

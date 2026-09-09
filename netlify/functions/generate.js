@@ -51,7 +51,11 @@ Your task is to transform raw, unedited questionnaire responses into a profound,
 #### Contract to Self
 Include the formal 5-point Personal Transformation Agreement with Acknowledgment of Current State, Commitments, Termination of Old Patterns, and Signature/Date lines at the end.
 
-Output your response in clean, elegant Markdown with clear Part headings. Do not include introductory conversational filler.
+Output your response in clean, elegant Markdown starting with:
+# NOBODY: Alchemy of Self Manifesto
+*STUDIO PROTOCOL · PERSONAL TRANSFORMATION DOSSIER*
+
+Follow with the four parts with clear Part headings (Part 1: The Story Thus Far, Part 2: Current Self, Part 3: Inspirations & Dream Life, Part 4: Future Self, and Contract to Self). Do not include introductory conversational filler.
 `;
 
 exports.handler = async function (event, context) {
