@@ -20,10 +20,15 @@
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -314,6 +319,7 @@ body {
   transition: all 0.15s ease;
   border: 1px solid transparent;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 .btn-utility {
@@ -509,6 +515,248 @@ body {
 /* Hidden Utility */
 .hidden {
   display: none !important;
+}
+
+/* ---------- Mobile Optimization (Phones & Small Screens) ---------- */
+@media (max-width: 640px) {
+  .wrap {
+    padding: 24px 14px 60px;
+  }
+
+  /* Masthead */
+  .masthead {
+    padding: 16px 0 24px;
+    margin-bottom: 22px;
+  }
+
+  .brand-logo-wrap {
+    margin-bottom: 16px;
+  }
+
+  .brand-logo-wrap .brand-logo {
+    height: 44px;
+    width: 44px;
+  }
+
+  .tagline {
+    font-size: 24px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .standfirst {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  /* Studio Card */
+  .studio-card {
+    padding: 20px 14px;
+    margin-bottom: 24px;
+  }
+
+  /* Stepper */
+  .wizard-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .step-indicator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .step-pill {
+    padding: 9px 8px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .header-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .progress-bar-container {
+    margin-bottom: 24px;
+  }
+
+  /* Chapter Banner */
+  .chapter-banner {
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+  }
+
+  .spine-num {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .chapter-banner h2 {
+    font-size: 19px;
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+
+  .chapter-banner p {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  /* Question Cards & Inputs */
+  .questions-list {
+    gap: 16px;
+  }
+
+  .question-card {
+    padding: 16px 14px;
+  }
+
+  .q-header {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .q-number {
+    font-size: 10.5px;
+    padding: 2px 6px;
+  }
+
+  .q-title {
+    font-size: 14.5px;
+    line-height: 1.35;
+  }
+
+  .q-prompt {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .form-control {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    padding: 11px 12px;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+
+  /* Navigation Footer */
+  .wizard-footer {
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 18px;
+  }
+
+  .wizard-footer .btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 11.5px;
+    min-height: 48px;
+  }
+
+  .footer-spacer {
+    display: none;
+  }
+
+  .btn-flare {
+    width: 100%;
+    padding: 16px 20px;
+  }
+
+  /* Loading State */
+  .loading-container {
+    padding: 40px 14px;
+  }
+
+  .ring-loader {
+    width: 44px;
+    height: 44px;
+    border-width: 5px;
+    margin-bottom: 18px;
+  }
+
+  .loading-container h3 {
+    font-size: 17px;
+  }
+
+  .loading-subtext {
+    font-size: 13px;
+  }
+
+  /* Results View */
+  .result-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .toolbar-left, .toolbar-right {
+    width: 100%;
+  }
+
+  .toolbar-left .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 11px;
+    min-height: 44px;
+  }
+
+  .toolbar-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .toolbar-right .btn-utility {
+    padding: 12px 8px;
+    font-size: 10px;
+    text-align: center;
+    min-height: 44px;
+  }
+
+  .toolbar-right .btn-flare-sm {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 13px;
+    font-size: 11px;
+    text-align: center;
+    min-height: 44px;
+  }
+
+  .manifesto-content {
+    padding: 20px 14px;
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  .manifesto-content h1 {
+    font-size: 1.65rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .manifesto-content h2 {
+    font-size: 1.15rem;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  .manifesto-content p {
+    text-align: left;
+    margin-bottom: 14px;
+  }
+
+  .manifesto-content blockquote {
+    padding-left: 12px;
+    margin: 16px 0;
+  }
 }
 
 /* ---------- Print Media ---------- */
