@@ -44,7 +44,10 @@ const server = http.createServer(async (req, res) => {
     '.html': 'text/html',
     '.css': 'text/css',
     '.js': 'application/javascript',
-    '.json': 'application/json'
+    '.json': 'application/json',
+    '.svg': 'image/svg+xml',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg'
   };
 
   res.writeHead(200, { 'Content-Type': mimeTypes[ext] || 'text/plain' });

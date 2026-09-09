@@ -39,58 +39,36 @@ body {
 .wrap {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 24px 100px;
+  padding: 40px 24px 80px;
 }
 
 /* ---------- Masthead ---------- */
 .masthead {
-  padding: 56px 0 44px;
-  border-bottom: 2px solid var(--text);
+  padding: 20px 0 36px;
+  border-bottom: 1px solid var(--rule);
   margin-bottom: 36px;
+  text-align: left;
 }
 
-.filemeta {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  margin-bottom: 32px;
+.brand-logo-wrap {
+  margin-bottom: 24px;
+  display: inline-block;
 }
 
-.filemeta b {
-  color: var(--text);
-  font-weight: 500;
-}
-
-.plate {
-  background: var(--bone);
-  border: 1px solid var(--hair);
-  padding: 32px 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 36px;
-}
-
-.plate .brand-logo {
-  width: 100%;
-  max-width: 440px;
-  height: auto;
+.brand-logo-wrap .brand-logo {
+  height: 48px;
+  width: auto;
   display: block;
 }
 
 .tagline {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(28px, 5.2vw, 52px);
-  line-height: 1.02;
+  font-size: clamp(26px, 4.8vw, 46px);
+  line-height: 1.05;
   letter-spacing: -0.025em;
   text-wrap: balance;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 }
 
 .tagline em {
@@ -101,7 +79,7 @@ body {
 .standfirst {
   max-width: 64ch;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -212,8 +190,8 @@ body {
 .chapter-banner h2 {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(22px, 3.4vw, 32px);
-  line-height: 1.08;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
   color: var(--text);
@@ -367,7 +345,6 @@ body {
   background: #fff;
 }
 
-/* The Tenth Rule: Flare is all or under 10% */
 .btn-flare {
   background: var(--flare);
   color: var(--ink);
@@ -525,45 +502,19 @@ body {
   margin: 20px 0;
 }
 
-/* ---------- Footer Lockup ---------- */
-.site-footer {
-  padding: 40px 0;
-  border-top: 1px solid var(--rule);
-}
-
-.footer-lockup {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.footer-brand {
-  font-weight: 500;
-  color: var(--text);
-}
-
-.footer-rule {
-  color: var(--flare);
-}
-
 /* Hidden Utility */
 .hidden {
   display: none !important;
 }
 
-/* ---------- Print Media (Book / Manifesto format) ---------- */
+/* ---------- Print Media ---------- */
 @media print {
   body {
     background: #fff !important;
     color: #0A0A0A !important;
     padding: 0;
   }
-  .masthead, .wizard-header, .progress-bar-container, .wizard-footer, .result-toolbar, .site-footer, #wizard-section, #loading-section {
+  .masthead, .wizard-header, .progress-bar-container, .wizard-footer, .result-toolbar, #wizard-section, #loading-section {
     display: none !important;
   }
   .studio-card {
